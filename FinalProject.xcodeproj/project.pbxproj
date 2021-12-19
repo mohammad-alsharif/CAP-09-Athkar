@@ -31,6 +31,8 @@
 		5A9CCD3C276D11B6001989D6 /* NavigationLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */; };
 		5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3F276DFFDD001989D6 /* TabBar.swift */; };
 		5A9CCD42276E80A2001989D6 /* AthkarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD41276E80A2001989D6 /* AthkarCollectionCell.swift */; };
+		5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */; };
+		5A9CCD46276F1BC9001989D6 /* AthkarOfTheUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLogin.swift; sourceTree = "<group>"; };
 		5A9CCD3F276DFFDD001989D6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		5A9CCD41276E80A2001989D6 /* AthkarCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarCollectionCell.swift; sourceTree = "<group>"; };
+		5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAthkar.swift; sourceTree = "<group>"; };
+		5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarOfTheUser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +105,11 @@
 				5A9CCD3F276DFFDD001989D6 /* TabBar.swift */,
 				5A874EB1276B32CE0094913E /* AthkaryVC.swift */,
 				5A7DDF6F2768C0C5005B9059 /* Sebha.swift */,
+				5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */,
 				5A9CCD41276E80A2001989D6 /* AthkarCollectionCell.swift */,
 				5A7DDF2E27660FCB005B9059 /* AthkarTableVC.swift */,
 				5A7DDF3027661000005B9059 /* AthkarCustomCell.swift */,
+				5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */,
 				5A7DDF3127661000005B9059 /* AthkarCustomCell.xib */,
 				5A7DDF1827652E32005B9059 /* Main.storyboard */,
 				5A7DDF1B27652E35005B9059 /* Assets.xcassets */,
@@ -207,8 +213,10 @@
 				5A7DDF2F27660FCB005B9059 /* AthkarTableVC.swift in Sources */,
 				5A874EB2276B32CE0094913E /* AthkaryVC.swift in Sources */,
 				5A7DDF3227661000005B9059 /* AthkarCustomCell.swift in Sources */,
+				5A9CCD46276F1BC9001989D6 /* AthkarOfTheUser.swift in Sources */,
 				5A7DDF6C27672BC6005B9059 /* UserSignUp.swift in Sources */,
 				5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */,
+				5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */,
 				5A7DDF6E27672BEF005B9059 /* UserLogin.swift in Sources */,
 				5A7DDF1527652E32005B9059 /* SceneDelegate.swift in Sources */,
 			);

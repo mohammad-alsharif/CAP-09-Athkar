@@ -16,7 +16,7 @@ class Sebha: UIViewController {
     @IBOutlet weak var tasbeh: UIImageView!
     @IBOutlet weak var segmentSebha: UISegmentedControl!
     @IBOutlet weak var Button: UIButton!
-    
+    //
     
     override func viewDidLoad() {
         super.viewDidLoad()

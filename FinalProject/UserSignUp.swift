@@ -21,7 +21,7 @@ class UserSignUp: UIViewController {
 
     }
     
-    
+    //
     
     @IBAction func signUp(_ sender: UIButton) {
         Auth.auth().createUser(withEmail: signUpEmail.text!, password: signUpPassword.text!) { result, error in

@@ -16,7 +16,7 @@ class AthkaryVC: UIViewController {
 
         
     }
-    
+    //
 //    @IBAction func signOut(_ sender: UIBarButtonItem) {
 //
 //        do {

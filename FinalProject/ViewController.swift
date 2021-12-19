@@ -15,8 +15,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-
+        // corner radius
         signUpLabel.layer.cornerRadius = 16
         logInLabel.layer.cornerRadius = 16
         

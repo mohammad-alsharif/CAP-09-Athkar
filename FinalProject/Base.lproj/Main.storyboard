@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qaa-fq-znh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i9R-Bm-i3m">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
@@ -217,6 +217,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Add note" id="HQk-K8-3ku">
                             <connections>
                                 <action selector="addNote:" destination="EMP-ww-R4h" id="hOu-aw-qhs"/>
+                                <segue destination="X1R-fx-7jU" kind="show" id="Zho-EK-l9n"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -395,25 +396,28 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SBE-q6-FnF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7410.7692307692305" y="79.620853080568722"/>
+            <point key="canvasLocation" x="6511" y="-784"/>
         </scene>
-        <!--View Controller-->
+        <!--Athkar Of The User-->
         <scene sceneID="YNV-1e-Y0b">
             <objects>
-                <viewController id="X1R-fx-7jU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AthkarOfTheUser" id="X1R-fx-7jU" customClass="AthkarOfTheUser" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G09-fU-9Qr">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="DdO-6i-t6r">
-                                <rect key="frame" x="0.0" y="44" width="390" height="800"/>
+                                <rect key="frame" x="0.0" y="88" width="390" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="xK5-OX-XmV">
-                                <rect key="frame" x="0.0" y="764" width="390" height="44"/>
+                                <rect key="frame" x="0.0" y="710" width="390" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="addingTheThekr:" destination="X1R-fx-7jU" eventType="touchUpInside" id="K9o-kZ-D74"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2wb-sB-qGW"/>
@@ -425,25 +429,59 @@
                             <constraint firstItem="DdO-6i-t6r" firstAttribute="leading" secondItem="2wb-sB-qGW" secondAttribute="leading" id="gdl-mu-mwx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="VoG-Xk-OrH"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3fi-yU-lm2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8167.6923076923076" y="79.620853080568722"/>
+            <point key="canvasLocation" x="7685" y="81"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Athkar-->
         <scene sceneID="2Tm-ve-o21">
             <objects>
-                <viewController id="QBB-wr-zqK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddAthkar" id="QBB-wr-zqK" customClass="AddAthkar" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A2W-Rk-wzc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Id-zc-Qcw">
+                                <rect key="frame" x="16" y="541" width="358" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cNK-Nn-BX8">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="392"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FR1-Fi-hTb">
+                                <rect key="frame" x="16" y="759" width="358" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <connections>
+                                    <action selector="saveTheThekr:" destination="QBB-wr-zqK" eventType="touchUpInside" id="TAI-CG-VUq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFr-ah-XHa">
+                                <rect key="frame" x="16" y="655" width="358" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="tg9-Ye-zhp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="textThekr" destination="dFr-ah-XHa" id="cjr-wZ-A0d"/>
+                        <outlet property="titleThekr" destination="3Id-zc-Qcw" id="ByP-oX-WPP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vpa-jK-x4M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8905" y="77"/>
+            <point key="canvasLocation" x="8456.9230769230762" y="77.488151658767762"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="GO4-Da-AGl">

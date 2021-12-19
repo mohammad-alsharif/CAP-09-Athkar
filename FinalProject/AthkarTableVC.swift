@@ -52,7 +52,7 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let AthkarVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkaryVC") as! AthkaryVC
         navigationController?.pushViewController(AthkarVC, animated: true)
     }
-    
+    //
     @IBAction func addNote(_ sender: UIBarButtonItem) {
         let UserID = UserDefaults.standard.string(forKey: "UID")
         if UserID != nil {
