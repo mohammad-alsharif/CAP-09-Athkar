@@ -8,10 +8,21 @@
 import UIKit
 import Firebase
 
-class AddAthkar: UIViewController {
+protocol AthkarDelegte {
+    func saveDone()
+}
 
-    @IBOutlet weak var titleThekr: UILabel!
-    @IBOutlet weak var textThekr: UILabel!
+struct Athkar {
+    var title: String?
+    var text: String?
+}
+
+class AddAthkar: UIViewController {
+    
+    var delegate: AthkarDelegte?
+    
+    @IBOutlet weak var titleThekr: UITextField!
+    @IBOutlet weak var textThekr: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +34,10 @@ class AddAthkar: UIViewController {
         let Save = Database.database().reference().child("Athkar").childByAutoId().key
         let titleAndTextThekr = ["tile": titleThekr.text, "text": textThekr.text, "key": Save]
         
-        //Database.database().reference().child("Athkar").child(Save).setValue(titleAndTextThekr)
+        Database.database().reference().child("Athkar").child(Save!).setValue(titleAndTextThekr)
+        self.delegate?.saveDone()
+        
+        navigationController?.popViewController(animated: true)
     }
     
 }

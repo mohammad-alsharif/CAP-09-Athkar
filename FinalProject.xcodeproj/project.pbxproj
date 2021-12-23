@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A995D954268CD0177FBC9D1 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A06F9C2ECCB951F9D9071DF /* Pods_FinalProject.framework */; };
+		5A3346512771D31D002E29E1 /* Quran2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3346502771D31D002E29E1 /* Quran2.swift */; };
+		5A33465C2771F6C6002E29E1 /* AthkarCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33465B2771F6C6002E29E1 /* AthkarCollectionVC.swift */; };
+		5A33465E2771FBF7002E29E1 /* AthkarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33465D2771FBF7002E29E1 /* AthkarVC.swift */; };
 		5A7DDF1327652E32005B9059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF1227652E32005B9059 /* AppDelegate.swift */; };
 		5A7DDF1527652E32005B9059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF1427652E32005B9059 /* SceneDelegate.swift */; };
 		5A7DDF1727652E32005B9059 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF1627652E32005B9059 /* ViewController.swift */; };
@@ -30,12 +34,19 @@
 		5A874EB2276B32CE0094913E /* AthkaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A874EB1276B32CE0094913E /* AthkaryVC.swift */; };
 		5A9CCD3C276D11B6001989D6 /* NavigationLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */; };
 		5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3F276DFFDD001989D6 /* TabBar.swift */; };
-		5A9CCD42276E80A2001989D6 /* AthkarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD41276E80A2001989D6 /* AthkarCollectionCell.swift */; };
 		5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */; };
 		5A9CCD46276F1BC9001989D6 /* AthkarOfTheUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */; };
+		5A9CCD69276F4459001989D6 /* AthkarOfTheUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD67276F4459001989D6 /* AthkarOfTheUserCell.swift */; };
+		5A9CCD6A276F4459001989D6 /* AthkarOfTheUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9CCD68276F4459001989D6 /* AthkarOfTheUserCell.xib */; };
+		5A9CCD6C27707B4A001989D6 /* quran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD6B27707B4A001989D6 /* quran.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22A450E12899B8524CD24256 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
+		4A06F9C2ECCB951F9D9071DF /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A3346502771D31D002E29E1 /* Quran2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quran2.swift; sourceTree = "<group>"; };
+		5A33465B2771F6C6002E29E1 /* AthkarCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarCollectionVC.swift; sourceTree = "<group>"; };
+		5A33465D2771FBF7002E29E1 /* AthkarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarVC.swift; sourceTree = "<group>"; };
 		5A7DDF0F27652E32005B9059 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7DDF1227652E32005B9059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A7DDF1427652E32005B9059 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,9 +65,12 @@
 		5A874EB1276B32CE0094913E /* AthkaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkaryVC.swift; sourceTree = "<group>"; };
 		5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLogin.swift; sourceTree = "<group>"; };
 		5A9CCD3F276DFFDD001989D6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		5A9CCD41276E80A2001989D6 /* AthkarCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarCollectionCell.swift; sourceTree = "<group>"; };
 		5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAthkar.swift; sourceTree = "<group>"; };
 		5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarOfTheUser.swift; sourceTree = "<group>"; };
+		5A9CCD67276F4459001989D6 /* AthkarOfTheUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarOfTheUserCell.swift; sourceTree = "<group>"; };
+		5A9CCD68276F4459001989D6 /* AthkarOfTheUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AthkarOfTheUserCell.xib; sourceTree = "<group>"; };
+		5A9CCD6B27707B4A001989D6 /* quran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quran.swift; sourceTree = "<group>"; };
+		76CF9233D362D3611B94E0CC /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,17 +85,42 @@
 				5A7DDF6227670ECF005B9059 /* FirebaseAuth in Frameworks */,
 				5A7DDF5E27670ECF005B9059 /* FirebaseAnalytics in Frameworks */,
 				5A7DDF6A27670ECF005B9059 /* FirebaseFirestore in Frameworks */,
+				2A995D954268CD0177FBC9D1 /* Pods_FinalProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		336A34B29D48C3520A18EDF2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				22A450E12899B8524CD24256 /* Pods-FinalProject.debug.xcconfig */,
+				76CF9233D362D3611B94E0CC /* Pods-FinalProject.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		5A3346582771F32E002E29E1 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				5A7DDF1627652E32005B9059 /* ViewController.swift */,
+				5A7DDF6B27672BC6005B9059 /* UserSignUp.swift */,
+				5A7DDF6D27672BEF005B9059 /* UserLogin.swift */,
+				5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */,
+				5A9CCD3F276DFFDD001989D6 /* TabBar.swift */,
+				5A7DDF6F2768C0C5005B9059 /* Sebha.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		5A7DDF0627652E32005B9059 = {
 			isa = PBXGroup;
 			children = (
 				5A7DDF1127652E32005B9059 /* FinalProject */,
 				5A7DDF1027652E32005B9059 /* Products */,
+				336A34B29D48C3520A18EDF2 /* Pods */,
+				EC281B1F7C03040C4EBCC1AB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,18 +137,18 @@
 			children = (
 				5A7DDF1227652E32005B9059 /* AppDelegate.swift */,
 				5A7DDF1427652E32005B9059 /* SceneDelegate.swift */,
-				5A7DDF1627652E32005B9059 /* ViewController.swift */,
-				5A7DDF6B27672BC6005B9059 /* UserSignUp.swift */,
-				5A7DDF6D27672BEF005B9059 /* UserLogin.swift */,
-				5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */,
-				5A9CCD3F276DFFDD001989D6 /* TabBar.swift */,
+				5A3346582771F32E002E29E1 /* New Group */,
 				5A874EB1276B32CE0094913E /* AthkaryVC.swift */,
-				5A7DDF6F2768C0C5005B9059 /* Sebha.swift */,
+				5A9CCD6B27707B4A001989D6 /* quran.swift */,
+				5A3346502771D31D002E29E1 /* Quran2.swift */,
+				5A33465B2771F6C6002E29E1 /* AthkarCollectionVC.swift */,
+				5A33465D2771FBF7002E29E1 /* AthkarVC.swift */,
 				5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */,
-				5A9CCD41276E80A2001989D6 /* AthkarCollectionCell.swift */,
 				5A7DDF2E27660FCB005B9059 /* AthkarTableVC.swift */,
 				5A7DDF3027661000005B9059 /* AthkarCustomCell.swift */,
 				5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */,
+				5A9CCD67276F4459001989D6 /* AthkarOfTheUserCell.swift */,
+				5A9CCD68276F4459001989D6 /* AthkarOfTheUserCell.xib */,
 				5A7DDF3127661000005B9059 /* AthkarCustomCell.xib */,
 				5A7DDF1827652E32005B9059 /* Main.storyboard */,
 				5A7DDF1B27652E35005B9059 /* Assets.xcassets */,
@@ -120,6 +159,14 @@
 			path = FinalProject;
 			sourceTree = "<group>";
 		};
+		EC281B1F7C03040C4EBCC1AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A06F9C2ECCB951F9D9071DF /* Pods_FinalProject.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A7DDF2327652E35005B9059 /* Build configuration list for PBXNativeTarget "FinalProject" */;
 			buildPhases = (
+				7F9CE3AD7C137627703104EB /* [CP] Check Pods Manifest.lock */,
 				5A7DDF0B27652E32005B9059 /* Sources */,
 				5A7DDF0C27652E32005B9059 /* Frameworks */,
 				5A7DDF0D27652E32005B9059 /* Resources */,
+				24632505DE4A3AF2E0F93CD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,6 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9CCD6A276F4459001989D6 /* AthkarOfTheUserCell.xib in Resources */,
 				5A7DDF1F27652E35005B9059 /* LaunchScreen.storyboard in Resources */,
 				5A7DDF1C27652E35005B9059 /* Assets.xcassets in Resources */,
 				5A7DDF5B27670771005B9059 /* GoogleService-Info.plist in Resources */,
@@ -200,25 +250,71 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24632505DE4A3AF2E0F93CD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F9CE3AD7C137627703104EB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FinalProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5A7DDF0B27652E32005B9059 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9CCD42276E80A2001989D6 /* AthkarCollectionCell.swift in Sources */,
 				5A7DDF1727652E32005B9059 /* ViewController.swift in Sources */,
 				5A7DDF702768C0C5005B9059 /* Sebha.swift in Sources */,
 				5A7DDF1327652E32005B9059 /* AppDelegate.swift in Sources */,
 				5A9CCD3C276D11B6001989D6 /* NavigationLogin.swift in Sources */,
+				5A9CCD69276F4459001989D6 /* AthkarOfTheUserCell.swift in Sources */,
+				5A33465E2771FBF7002E29E1 /* AthkarVC.swift in Sources */,
 				5A7DDF2F27660FCB005B9059 /* AthkarTableVC.swift in Sources */,
 				5A874EB2276B32CE0094913E /* AthkaryVC.swift in Sources */,
 				5A7DDF3227661000005B9059 /* AthkarCustomCell.swift in Sources */,
+				5A33465C2771F6C6002E29E1 /* AthkarCollectionVC.swift in Sources */,
 				5A9CCD46276F1BC9001989D6 /* AthkarOfTheUser.swift in Sources */,
 				5A7DDF6C27672BC6005B9059 /* UserSignUp.swift in Sources */,
 				5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */,
 				5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */,
+				5A9CCD6C27707B4A001989D6 /* quran.swift in Sources */,
 				5A7DDF6E27672BEF005B9059 /* UserLogin.swift in Sources */,
 				5A7DDF1527652E32005B9059 /* SceneDelegate.swift in Sources */,
+				5A3346512771D31D002E29E1 /* Quran2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +458,7 @@
 		};
 		5A7DDF2427652E35005B9059 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22A450E12899B8524CD24256 /* Pods-FinalProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -390,6 +487,7 @@
 		};
 		5A7DDF2527652E35005B9059 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76CF9233D362D3611B94E0CC /* Pods-FinalProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

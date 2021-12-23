@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -52,13 +53,14 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let AthkarVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkaryVC") as! AthkaryVC
         navigationController?.pushViewController(AthkarVC, animated: true)
     }
-    //
+    
+    
     @IBAction func addNote(_ sender: UIBarButtonItem) {
         let UserID = UserDefaults.standard.string(forKey: "UID")
         if UserID != nil {
             
-            let AthkarVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkaryVC") as! AthkaryVC
-            navigationController?.pushViewController(AthkarVC, animated: true)
+            let AthkarOfTheUserVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkarOfTheUserID") as! AthkarOfTheUser
+            navigationController?.pushViewController(AthkarOfTheUserVC, animated: true)
             
         } else {
             let alert = UIAlertController(title: "Hello", message: "You must signUp in App", preferredStyle: UIAlertController.Style.alert)
@@ -67,9 +69,9 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 
                 let window = UIApplication.shared.windows.first
                 let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let vc : UIViewController = storyboard.instantiateViewController(withIdentifier: "NavigationLogin") as! NavigationLogin
+                let VC : UIViewController = storyboard.instantiateViewController(withIdentifier: "NavigationLogin") as! NavigationLogin
                 window?.makeKeyAndVisible()
-                window?.rootViewController = vc
+                window?.rootViewController = VC
             }))
             
             self.present(alert, animated: true, completion: nil)
