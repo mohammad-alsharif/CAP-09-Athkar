@@ -9,8 +9,9 @@ import UIKit
 
 class AthkarOfTheUserCell: UITableViewCell {
     
-    @IBOutlet weak var titleThekr: UITextField!
-    @IBOutlet weak var textThekr: UITextField!
+    @IBOutlet weak var titleThekr: UILabel!
+    @IBOutlet weak var textThekr: UILabel!
+    @IBOutlet weak var imageThekr: UIImageView!
     
     
     override func awakeFromNib() {

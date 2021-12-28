@@ -16,17 +16,5 @@ class AthkaryVC: UIViewController {
 
         
     }
-    //
-//    @IBAction func signOut(_ sender: UIBarButtonItem) {
-//
-//        do {
-//           try Auth.auth().signOut()
-//            let SignOutVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkaryID") as! AthkaryVC
-//            self.navigationController?.popViewController(animated: true)
-//
-//        } catch let signOutError as NSError {
-//            print("Error", signOutError)
-//        }
-//    }
 
 }

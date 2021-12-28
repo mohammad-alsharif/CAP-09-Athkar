@@ -13,6 +13,8 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     var array = ["Morning Athkar", "Night Athkar", "Pray Athkar" ,"Sleep Athkar"]
     @IBOutlet weak var tableViewAthkar: UITableView!
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +22,6 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         tableViewAthkar.dataSource = self
         tableViewAthkar.register(UINib(nibName: "AthkarCustomCell", bundle: nil), forCellReuseIdentifier: "Cell")
     }
-    
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             100
@@ -56,26 +57,23 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     
     @IBAction func addNote(_ sender: UIBarButtonItem) {
-        let UserID = UserDefaults.standard.string(forKey: "UID")
-        if UserID != nil {
-            
-            let AthkarOfTheUserVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkarOfTheUserID") as! AthkarOfTheUser
-            navigationController?.pushViewController(AthkarOfTheUserVC, animated: true)
-            
-        } else {
-            let alert = UIAlertController(title: "Hello", message: "You must signUp in App", preferredStyle: UIAlertController.Style.alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { UIAlertAction in
+        
+        Auth.auth().addStateDidChangeListener { Auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "AddNote", sender: nil)
+                print("App")
                 
-                let window = UIApplication.shared.windows.first
-                let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let VC : UIViewController = storyboard.instantiateViewController(withIdentifier: "NavigationLogin") as! NavigationLogin
-                window?.makeKeyAndVisible()
-                window?.rootViewController = VC
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertController(title: "Hello", message: "You must signUp in App", preferredStyle: UIAlertController.Style.alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { UIAlertAction in
+                    let appDelegate = AppDelegate()
+                    appDelegate.firstPage()
+                }))
+                self.present(alert, animated: true, completion: nil)
+                print("Login")
+            }
         }
     }
-   
+    
 }

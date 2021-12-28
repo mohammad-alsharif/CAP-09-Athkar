@@ -15,6 +15,7 @@ protocol AthkarDelegte {
 struct Athkar {
     var title: String?
     var text: String?
+    var ID: String?
 }
 
 class AddAthkar: UIViewController {
@@ -32,7 +33,7 @@ class AddAthkar: UIViewController {
 
     @IBAction func saveTheThekr(_ sender: UIButton) {
         let Save = Database.database().reference().child("Athkar").childByAutoId().key
-        let titleAndTextThekr = ["tile": titleThekr.text, "text": textThekr.text, "key": Save]
+        let titleAndTextThekr = ["title": titleThekr.text, "text": textThekr.text, "key": Save]
         
         Database.database().reference().child("Athkar").child(Save!).setValue(titleAndTextThekr)
         self.delegate?.saveDone()

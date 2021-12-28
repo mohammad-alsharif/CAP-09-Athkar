@@ -56,6 +56,12 @@ class Quran2: UIViewController {
             let responseObject = try! jsonDecoder.decode(Welcome.self, from: data!)
             self.quranResponse = responseObject
             print(responseObject)
+//            do {
+//
+//                let tablview = self.storyboard?.instantiateViewController(withIdentifier: "") as! quran
+//
+//            }
+            
         }
         sessionTask.resume()
         performSegue(withIdentifier: "goToTable", sender: nil)

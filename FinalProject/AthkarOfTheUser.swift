@@ -10,9 +10,11 @@ import Firebase
 
 class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSource, AthkarDelegte {
     
-    var arr = [Athkar]()
+    var arrayAthkar = [Athkar]()
 
     @IBOutlet weak var tableViewAthkar: UITableView!
+    @IBOutlet weak var circleButton: UIButton!
+    
     
     func saveDone() {
         tableViewAthkar.reloadData()
@@ -20,20 +22,37 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arr.count
+        arrayAthkar.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewAthkar.dequeueReusableCell(withIdentifier: "Cell") as! AthkarOfTheUserCell
-        cell.titleThekr.text = arr[indexPath.row].title ?? ""
-        cell.textThekr.text = arr[indexPath.row].text ?? ""
+        cell.titleThekr.text = arrayAthkar[indexPath.row].title ?? ""
+        cell.textThekr.text = arrayAthkar[indexPath.row].text ?? ""
         return cell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     
+    private func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        circleButton.layer.cornerRadius = circleButton.bounds.height / 2
+        circleButton.layer.borderColor = UIColor.white.cgColor
+        circleButton.layer.borderWidth = 10
         
         let n = UINib(nibName: "AthkarOfTheUserCell", bundle: nil)
         tableViewAthkar.register(n, forCellReuseIdentifier: "Cell")
@@ -43,14 +62,14 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     override func viewDidAppear(_ animated: Bool) {
         Database.database().reference().child("Athkar").observeSingleEvent(of: .value) { snapshot in
-            print(snapshot.childrenCount)
+            
             for i in snapshot.children {
                 let snap = i as! DataSnapshot
                 let snap2 = snap.value as! [String: String]
-                let tile = snap2["tile"]
+                let title = snap2["title"]
                 let text = snap2["text"]
-                let newStruct = Athkar(title: tile, text: text)
-                self.arr.append(newStruct)
+                let newStruct = Athkar(title: title, text: text)
+                self.arrayAthkar.append(newStruct)
                 DispatchQueue.main.async {
                     self.tableViewAthkar.reloadData()
                 }
@@ -62,5 +81,15 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
         let AddingTheThekrVC = storyboard?.instantiateViewController(withIdentifier: "AddAthkar") as! AddAthkar
         navigationController?.pushViewController(AddingTheThekrVC, animated: true)
     }
-
+    
+    @IBAction func logOut(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            
+        } catch let signOutError as NSError {
+            print("Error", signOutError)
+        }
+        let AppDelegate = AppDelegate()
+        AppDelegate.firstPage()
+    }
 }
