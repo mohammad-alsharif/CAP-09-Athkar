@@ -33,9 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func firstPage() {
-        UIApplication.shared.windows[0].rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        let window = UIApplication.shared.windows.first
+        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "NavigationLogin") as! NavigationLogin
+        window?.makeKeyAndVisible()
+        window?.rootViewController = viewController
     }
-
-
+    
+    
 }
 

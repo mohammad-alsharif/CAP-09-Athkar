@@ -9,13 +9,13 @@ import UIKit
 
 class AthkarCollectionPage: UICollectionViewCell {
     
-    @IBOutlet weak var labelThekr: UILabel!
-    @IBOutlet weak var textViewThekr: UITextView!
+    @IBOutlet weak var widthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     
-
+    @IBOutlet weak var thekrLabel: UILabel!
+    @IBOutlet weak var thekrCounterLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        
     }
-
 }

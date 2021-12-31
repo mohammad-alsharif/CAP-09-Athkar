@@ -34,9 +34,9 @@ class ViewController: UIViewController {
     @IBAction func tabBar(_ sender: UIButton) {
         let window = UIApplication.shared.windows.first
         let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc : UIViewController = storyboard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+        let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
         window?.makeKeyAndVisible()
-        window?.rootViewController = vc
+        window?.rootViewController = viewController
     }
     
     

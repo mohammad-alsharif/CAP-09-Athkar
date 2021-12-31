@@ -14,23 +14,21 @@ class UserLogin: UIViewController {
     @IBOutlet weak var loginEmail: UITextField!
     @IBOutlet weak var loginPassword: UITextField!
     @IBOutlet weak var loginInformation: UILabel!
+    @IBOutlet weak var loginActivity: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-    }
-        
-    //
-    
-    @IBAction func signUp(_ sender: UIButton) {
-        let SignOutVC = storyboard?.instantiateViewController(withIdentifier: "SignUpID") as! UserSignUp
-        present(SignOutVC, animated: true, completion: nil)
+        loginActivity.startAnimating()
+        loginActivity.isHidden = true
     }
     
     @IBAction func Login(_ sender: UIButton) {
         
         Auth.auth().signIn(withEmail: loginEmail.text!, password: loginPassword.text!) { result, error in
             if error == nil {
+                self.loginActivity.isHidden = false
+                self.loginInformation.text = "You are logged in successfully"
+                self.loginInformation.textColor = UIColor.green
                 print(result?.user.uid ?? "")
                 
                 // Read to Database firebase
@@ -47,12 +45,15 @@ class UserLogin: UIViewController {
                     
                     let window = UIApplication.shared.windows.first
                     let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc : UIViewController = storyboard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+                    let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
                     window?.makeKeyAndVisible()
-                    window?.rootViewController = vc                }
-                
+                    window?.rootViewController = viewController
+                }
                 
             } else {
+                self.loginActivity.isHidden = false
+                self.loginInformation.text = "Wrong email or password"
+                self.loginInformation.textColor = UIColor.red
                 print(error?.localizedDescription ?? "")
             }
         }

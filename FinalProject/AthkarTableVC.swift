@@ -10,7 +10,7 @@ import Firebase
 
 class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var array = ["Morning Athkar", "Night Athkar", "Pray Athkar" ,"Sleep Athkar"]
+    var array = ["أذكار الصباح", "أذكار المساء", "أذكار الصلاة" ,"أذكار النوم"]
     @IBOutlet weak var tableViewAthkar: UITableView!
     
     
@@ -51,8 +51,8 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let AthkarVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkaryVC") as! AthkaryVC
-        navigationController?.pushViewController(AthkarVC, animated: true)
+        let AthkarAlsabah = self.storyboard?.instantiateViewController(withIdentifier: "AthkaAlSabah") as! AthkarCollectionVC
+        navigationController?.pushViewController(AthkarAlsabah, animated: true)
     }
     
     
@@ -60,8 +60,8 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         
         Auth.auth().addStateDidChangeListener { Auth, user in
             if user != nil {
-                self.performSegue(withIdentifier: "AddNote", sender: nil)
-                print("App")
+                let AddNoteVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkarOfTheUser") as! AthkarOfTheUser
+                self.navigationController?.pushViewController(AddNoteVC, animated: true)
                 
             } else {
                 let alert = UIAlertController(title: "Hello", message: "You must signUp in App", preferredStyle: UIAlertController.Style.alert)

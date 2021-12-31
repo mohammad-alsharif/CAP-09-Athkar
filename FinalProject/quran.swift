@@ -9,7 +9,7 @@ import UIKit
 import Alamofire
 
 class quran: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    var quranResponse : Welcome!
+//    var quranResponse : Welcome!
     var t = ""
     // http://api.alquran.cloud/v1/edition
     

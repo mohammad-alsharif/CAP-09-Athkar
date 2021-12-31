@@ -15,17 +15,19 @@ class UserSignUp: UIViewController {
     @IBOutlet weak var signUpPassword: UITextField!
     @IBOutlet weak var signUpRePassword: UITextField!
     @IBOutlet weak var registrationInformation: UILabel!
+    @IBOutlet weak var signUpActivity: UIActivityIndicatorView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        signUpActivity.startAnimating()
+        signUpActivity.isHidden = true
     }
-    
-    //
     
     @IBAction func signUp(_ sender: UIButton) {
         Auth.auth().createUser(withEmail: signUpEmail.text!, password: signUpPassword.text!) { result, error in
             if error == nil {
+                self.signUpActivity.isHidden = false
                 self.registrationInformation.text = "You have been successfully registered"
                 self.registrationInformation.textColor = UIColor.green
                 
@@ -44,10 +46,11 @@ class UserSignUp: UIViewController {
                 self.navigationController?.pushViewController(SignUpVC, animated: true)
                 
             } else {
-                    self.registrationInformation.text = error?.localizedDescription
-                    self.registrationInformation.textColor = UIColor.red
-                }
-                
+                self.registrationInformation.text = error?.localizedDescription
+                self.registrationInformation.textColor = UIColor.red
+                self.signUpActivity.isHidden = false
             }
+            
         }
     }
+}

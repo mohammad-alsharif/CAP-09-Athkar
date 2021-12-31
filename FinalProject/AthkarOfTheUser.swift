@@ -13,6 +13,7 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     var arrayAthkar = [Athkar]()
 
     @IBOutlet weak var tableViewAthkar: UITableView!
+    @IBOutlet weak var activityData: UIActivityIndicatorView!
     @IBOutlet weak var circleButton: UIButton!
     
     
@@ -43,7 +44,7 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
+            
         }
     }
     
@@ -61,7 +62,14 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        Database.database().reference().child("Athkar").observeSingleEvent(of: .value) { snapshot in
+        activityData.startAnimating()
+        activityData.isHidden = false
+        
+        self.arrayAthkar.removeAll()
+        tableViewAthkar.reloadData()
+        
+        let UID = UserDefaults.standard.string(forKey: "UID")!
+        Database.database().reference().child("Athkar").child(UID).observe(.value) { snapshot in
             
             for i in snapshot.children {
                 let snap = i as! DataSnapshot
@@ -72,6 +80,9 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
                 self.arrayAthkar.append(newStruct)
                 DispatchQueue.main.async {
                     self.tableViewAthkar.reloadData()
+                    
+                    self.activityData.startAnimating()
+                    self.activityData.isHidden = true
                 }
             }
         }
@@ -79,7 +90,7 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     @IBAction func addingTheThekr(_ sender: UIButton) {
         let AddingTheThekrVC = storyboard?.instantiateViewController(withIdentifier: "AddAthkar") as! AddAthkar
-        navigationController?.pushViewController(AddingTheThekrVC, animated: true)
+        navigationController?.pushViewController(AddingTheThekrVC,animated: true)
     }
     
     @IBAction func logOut(_ sender: UIButton) {
