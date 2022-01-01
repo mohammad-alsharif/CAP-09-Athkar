@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4100" y="2370.1421800947865"/>
+            <point key="canvasLocation" x="10628" y="43"/>
         </scene>
         <!--Athkary-->
         <scene sceneID="uya-au-78j">
@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pyQ-9E-Ag4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4877" y="2369"/>
+            <point key="canvasLocation" x="11406" y="43"/>
         </scene>
         <!--Tab Bar-->
         <scene sceneID="itD-r6-brh">
@@ -369,7 +369,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbt-Z8-7aB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="nVf-5b-n8E" userLabel="Athkar Counter"/>
             </objects>
-            <point key="canvasLocation" x="7830.7692307692305" y="-843.12796208530801"/>
+            <point key="canvasLocation" x="8171" y="-833"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="TJt-zC-XQm">
@@ -516,7 +516,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9E6-YG-ibp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6510.7692307692305" y="3090.995260663507"/>
+            <point key="canvasLocation" x="6388" y="2423"/>
         </scene>
         <!--Athkar Of The User-->
         <scene sceneID="YNV-1e-Y0b">
@@ -557,9 +557,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hoa-SH-azI">
-                                <rect key="frame" x="303" y="64" width="67" height="31"/>
+                                <rect key="frame" x="300.33333333333331" y="64" width="69.666666666666686" height="32"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="15"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="logOut:" destination="X1R-fx-7jU" eventType="touchUpInside" id="qtc-6w-oTG"/>
                                 </connections>
@@ -783,7 +785,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Imj-Lo-mSQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5756.9230769230771" y="2371.5639810426537"/>
+            <point key="canvasLocation" x="12286" y="45"/>
         </scene>
         <!--sebha-->
         <scene sceneID="iZe-Z2-dVF">
@@ -840,7 +842,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V7J-UP-jl7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5637" y="3091"/>
+            <point key="canvasLocation" x="5637" y="2423"/>
         </scene>
         <!--Quran-->
         <scene sceneID="Moa-nj-5bH">
@@ -893,7 +895,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PYl-4e-v7P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3170.7692307692305" y="2370.1421800947865"/>
+            <point key="canvasLocation" x="9700" y="43"/>
         </scene>
     </scenes>
     <resources>
