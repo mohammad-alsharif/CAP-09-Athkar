@@ -6,151 +6,151 @@
 //
 
 import UIKit
-import CircleProgressBar
+import HGCircularSlider
 import QuartzCore
 
 class Sebha: UIViewController {
-    
-    let lblCounter: UILabel = {
-        let lbl = UILabel()
-        lbl.textColor = UIColor.white
-        lbl.numberOfLines = 0
-        lbl.textAlignment = .center
-        lbl.translatesAutoresizingMaskIntoConstraints = false
-        return lbl
-    }()
     
     var counter = 0
     var typeCounter = 0
     
     @IBOutlet weak var labelCounter: UILabel!
     @IBOutlet weak var segmentSebha: UISegmentedControl!
-    
-    let shapeCircleProgress = CAShapeLayer()
+    @IBOutlet weak var viewCircularSlider: CircularSlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let center = view.center
+        viewCircularSlider.stopThumbAtMinMax = true
+        viewCircularSlider.endThumbStrokeColor = .clear
+        viewCircularSlider.endThumbStrokeHighlightedColor = .clear
+        viewCircularSlider.endThumbTintColor = .clear
         
-        let theLayer = CAShapeLayer()
-        let circleProgrress = UIBezierPath(arcCenter: center, radius: 100, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        
-//        view.layer.addSublayer(shapeCircleProgress)
-        
-        theLayer.path = circleProgrress.cgPath
-        theLayer.strokeColor = UIColor.lightGray.cgColor
-        theLayer.lineWidth = 10
-        //        theLayer.fillColor = UIColor.clear.cgColor
-//                theLayer.lineCap = kCAlineCapRound
-//        view.layer.addSublayer(theLayer)
-        
-//        let circleProgrress = UIBezierPath(arcCenter: center, radius: 150, startAngle: -CGFloat.pi / 2, endAngle: 2 * CGFloat.pi, clockwise: true)
-        
-//        view.layer.addSublayer(shapeCircleProgress)
-        
-        shapeCircleProgress.path = circleProgrress.cgPath
-        shapeCircleProgress.strokeColor = UIColor.yellow.cgColor
-        shapeCircleProgress.lineWidth = 10
-//        shapeCircleProgress.fillColor = UIColor.clear.cgColor
-//        shapeCircleProgress.lineCap = kCAlineCapRound
-        shapeCircleProgress.strokeEnd = 0
-        
-        
-        
-        view.addGestureRecognizer(UIGestureRecognizer(target: self, action: #selector(tapGestureCounter)))
-        // tapGestureRecognizerCounter
-    }
-    
-    @objc func tapGestureCounter() {
-        print("H")
-        
-        let animation = CABasicAnimation(keyPath: "strokeEnd")
-        animation.toValue = 1
-        animation.duration = 2
-//        animation.fillMode = CAMediaTimingFillMode.forwards
-        animation.isRemovedOnCompletion = false
-        shapeCircleProgress.add(animation, forKey: "urSoBasic")
-        
-        
+        viewCircularSlider.isUserInteractionEnabled = true
+        let tasbeh = UIGestureRecognizer(target: self, action: #selector(tapGestureRecognizerCounter))
     }
     
     @IBAction func tapGestureRecognizerCounter(_ sender: UITapGestureRecognizer) {
-        
         if segmentSebha.selectedSegmentIndex == 0 {
             typeCounter = 10
+            viewCircularSlider.maximumValue = 0.0
             
             if counter == typeCounter {
                 counter = 0
-                labelCounter.text = String(counter)
-                let generator = UIImpactFeedbackGenerator(style: .heavy)
-                generator.impactOccurred()
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
-                    generator.impactOccurred()
-                })
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                    generator.impactOccurred()
-                })
-                
+                counter += 1
+                labelCounter.text = counter.description
+                ten()
                 
             } else {
                 let generator = UIImpactFeedbackGenerator(style: .heavy)
                 generator.impactOccurred()
+                
                 counter += 1
-                labelCounter.text = String(counter)
+                labelCounter.text = counter.description
+                ten()
             }
             
             
         } else if segmentSebha.selectedSegmentIndex == 1 {
             typeCounter = 33
+            
             if counter == typeCounter {
                 counter = 0
-                labelCounter.text = String(counter)
+                counter += 1
+                labelCounter.text = counter.description
+                thirtyThree()
                 
             } else {
                 let generator = UIImpactFeedbackGenerator(style: .heavy)
                 generator.impactOccurred()
+                
                 counter += 1
-                labelCounter.text = String(counter)
+                labelCounter.text = counter.description
+                thirtyThree()
             }
-            
             
         } else if segmentSebha.selectedSegmentIndex == 2 {
             typeCounter = 100
+            
             if counter == typeCounter {
                 counter = 0
-                labelCounter.text = String(counter)
+                counter += 1
+                labelCounter.text = counter.description
+                oneHundred()
                 
             } else {
                 let generator = UIImpactFeedbackGenerator(style: .heavy)
                 generator.impactOccurred()
+                
                 counter += 1
-                labelCounter.text = String(counter)
+                labelCounter.text = counter.description
+                oneHundred()
             }
+            
             
         } else if segmentSebha.selectedSegmentIndex == 3 {
             typeCounter = 1000
+            
             if counter == typeCounter {
                 counter = 0
-                labelCounter.text = String(counter)
+                counter += 1
+                labelCounter.text = counter.description
+                oneThousand()
                 
             } else {
                 let generator = UIImpactFeedbackGenerator(style: .heavy)
                 generator.impactOccurred()
+                
                 counter += 1
-                labelCounter.text = String(counter)
+                labelCounter.text = counter.description
+                oneThousand()
+                
             }
+            
+            
         } else {
             let generator = UIImpactFeedbackGenerator(style: .heavy)
             generator.impactOccurred()
+            
+            
+            
             counter += 1
-            labelCounter.text = String(counter)
+            labelCounter.text = counter.description
+            viewCircularSlider.maximumValue = 0.0
+//            viewCircularSlider.thumbRadius = 0
+//            viewCircularSlider.endThumbStrokeColor = view.backgroundColor!
         }
+        
     }
     
-
-    @IBAction func onChangeCounter(_ sender: Any) {
+    
+    @IBAction func onChangeCounter(_ sender: UIButton) {
         counter = 0
-        labelCounter.text = String(counter)
+        labelCounter.text = counter.description
+        viewCircularSlider.maximumValue = 0.0
+    }
+    
+    func ten() {
+        viewCircularSlider.minimumValue = 0.0
+        viewCircularSlider.maximumValue = 10.0
+        self.viewCircularSlider.endPointValue = CGFloat(self.counter)
+    }
+    
+    func thirtyThree() {
+        viewCircularSlider.minimumValue = 0.0
+        viewCircularSlider.maximumValue = 33.0
+        self.viewCircularSlider.endPointValue = CGFloat(self.counter)
+    }
+    
+    func oneHundred() {
+        viewCircularSlider.minimumValue = 0.0
+        viewCircularSlider.maximumValue = 100.0
+        self.viewCircularSlider.endPointValue = CGFloat(self.counter)
+    }
+    
+    func oneThousand() {
+        viewCircularSlider.minimumValue = 0.0
+        viewCircularSlider.maximumValue = 1000.0
+        self.viewCircularSlider.endPointValue = CGFloat(self.counter)
     }
 }

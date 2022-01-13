@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "beads.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "beads-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "beads-2.png",
+      "filename" : "placeholder-image-2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

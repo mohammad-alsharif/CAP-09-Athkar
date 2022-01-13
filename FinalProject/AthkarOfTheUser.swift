@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import SDWebImage
 
 class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSource, AthkarDelegte {
     
@@ -25,11 +26,12 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         arrayAthkar.count
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewAthkar.dequeueReusableCell(withIdentifier: "Cell") as! AthkarOfTheUserCell
         cell.titleThekr.text = arrayAthkar[indexPath.row].title ?? ""
         cell.textThekr.text = arrayAthkar[indexPath.row].text ?? ""
+        cell.imageThekr.sd_setImage(with: URL(string: arrayAthkar[indexPath.row].image ?? ""), placeholderImage: UIImage(named: "imagePlaseHolder"))
+
         return cell
     }
     
@@ -43,9 +45,9 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if (editingStyle == .delete) {
-            
-        }
+        
+        let reference = Database.database().reference()
+        
     }
     
     override func viewDidLoad() {
@@ -62,6 +64,10 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        getData()
+    }
+    
+    func getData() {
         activityData.startAnimating()
         activityData.isHidden = false
         
@@ -76,8 +82,10 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
                 let snap2 = snap.value as! [String: String]
                 let title = snap2["title"]
                 let text = snap2["text"]
-                let newStruct = Athkar(title: title, text: text)
-                self.arrayAthkar.append(newStruct)
+                let image = snap2["image"]
+                let ID = snap2["ID"]
+                let UID = snap2["UID"]
+                self.arrayAthkar.append(Athkar.init(title: title, text: text, ID: ID, image: image, UID: UID))
                 DispatchQueue.main.async {
                     self.tableViewAthkar.reloadData()
                     

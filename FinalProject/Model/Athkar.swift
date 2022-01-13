@@ -12,5 +12,6 @@ struct Athkar {
     var title: String?
     var text: String?
     var ID: String?
+    var image: String?
     var UID: String?
 }

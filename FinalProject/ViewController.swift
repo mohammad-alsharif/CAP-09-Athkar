@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var logInLabel: UIButton!
     @IBOutlet weak var signUpLabel: UIButton!
+    @IBOutlet weak var skipLabel: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
         // corner radius
         signUpLabel.layer.cornerRadius = 16
         logInLabel.layer.cornerRadius = 16
+        skipLabel.layer.cornerRadius = 16
         
     }
 

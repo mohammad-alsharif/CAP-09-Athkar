@@ -28,7 +28,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Alathkar" translatesAutoresizingMaskIntoConstraints="NO" id="mta-OF-OkR">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaseHolder" translatesAutoresizingMaskIntoConstraints="NO" id="mta-OF-OkR">
                         <rect key="frame" x="20" y="20" width="134" height="131"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="134" id="dqn-zJ-yXm"/>
@@ -57,6 +57,6 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="Alathkar" width="32" height="32"/>
+        <image name="imagePlaseHolder" width="266.66665649414062" height="200"/>
     </resources>
 </document>
