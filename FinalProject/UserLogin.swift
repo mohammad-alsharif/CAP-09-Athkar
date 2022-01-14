@@ -25,41 +25,44 @@ class UserLogin: UIViewController {
         loginActivity.isHidden = true
     }
     
-//    @IBAction func Login(_ sender: UIButton) {
-//
-//        Auth.auth().signIn(withEmail: loginEmail.text!, password: loginPassword.text!) { result, error in
-//            if error == nil {
-//                self.loginActivity.isHidden = false
-//                self.loginInformation.text = "You are logged in successfully"
-//                self.loginInformation.textColor = UIColor.green
-//                print(result?.user.uid ?? "")
-//
-//                let uidLogin = result?.user.uid ?? ""
-//
-//                UserDefaults.standard.set(uidLogin, forKey: "UID")
-//
-//                // Read to Database firebase
-//               let arrayLogin = ["email": self.loginEmail.text!, "type": "0", "UID": uidLogin]
-//
-//                self.dbFireStore.collection("User").document(uidLogin).addSnapshotListener { DocumentSnapshot, error in
-//                    <#code#>
-//                }
-//
-//
-//                    let window = UIApplication.shared.windows.first
-//                    let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                    let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
-//                    window?.makeKeyAndVisible()
-//                    window?.rootViewController = viewController
-//                }
-//
-//            } else {
-//                self.loginActivity.isHidden = false
-//                self.loginInformation.text = "Wrong email or password"
-//                self.loginInformation.textColor = UIColor.red
-//                print(error?.localizedDescription ?? "")
-//            }
-//        }
+    @IBAction func Login(_ sender: UIButton) {
         
-//    }
+        Auth.auth().signIn(withEmail: loginEmail.text!, password: loginPassword.text!) { result, error in
+            if error == nil {
+                self.loginActivity.isHidden = false
+                self.loginInformation.text = "You are logged in successfully"
+                self.loginInformation.textColor = UIColor.green
+                print(result?.user.uid ?? "")
+                
+                let uidLogin = result?.user.uid ?? ""
+                
+                UserDefaults.standard.set(uidLogin, forKey: "UID")
+                
+                // MARK: Get Data from FireStore
+                
+                self.dbFireStore.collection("User").document(uidLogin).getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                        print("Document data: \(dataDescription)")
+                        let window = UIApplication.shared.windows.first
+                        let storyboard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                        let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: "TabBar") as! TabBar
+                        window?.makeKeyAndVisible()
+                        window?.rootViewController = viewController
+                    } else {
+                        print("Document does not exist")
+                    }
+                }
+                
+                
+                
+            } else {
+                self.loginActivity.isHidden = false
+                self.loginInformation.text = "Wrong email or password"
+                self.loginInformation.textColor = UIColor.red
+                print(error?.localizedDescription ?? "")
+            }
+        }
+        
+    }
 }

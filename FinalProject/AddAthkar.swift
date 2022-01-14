@@ -16,7 +16,7 @@ protocol AthkarDelegte {
 class AddAthkar: UIViewController, UITextViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     var delegate: AthkarDelegte?
-    let db = Database.database().reference()
+    let dbFireStore = Firestore.firestore()
     var imageURL = ""
     
     @IBOutlet weak var titleThekr: UITextField!
@@ -40,18 +40,20 @@ class AddAthkar: UIViewController, UITextViewDelegate, UINavigationControllerDel
     }
     
     @IBAction func saveTheThekr(_ sender: UIButton) {
-        addDataToFirebase()
+        uploadImage()
     }
     
     func uploadImage() {
-        // MARK: identifer image by key for child chalet
-        let key = db.child("Athkar").childByAutoId().key
+        
+        let UID = UserDefaults.standard.string(forKey: "UID")
+        
+        let key = dbFireStore.collection("Athkar").document().documentID
 
         // MARK: convert image to data
         let imageData = self.imageThekr.image?.jpegData(compressionQuality: 0.5)
 
         // MARK: Upload image data to storage
-        Storage.storage().reference().child(key!).putData(imageData!, metadata: nil, completion: { (metadata, error) in
+        Storage.storage().reference().child(key).putData(imageData!, metadata: nil, completion: { (metadata, error) in
 
             if error == nil {
                 guard let metadata = metadata else {
@@ -59,16 +61,15 @@ class AddAthkar: UIViewController, UITextViewDelegate, UINavigationControllerDel
                     return
                 }
                 // MARK: download URL for image Uploaded
-                Storage.storage().reference().child(key!).downloadURL { [self] (url, error) in
+                Storage.storage().reference().child(key).downloadURL { [self] (url, error) in
                     
                     guard let downloadURL = url else {
                         print("error")
                         return
                     }
-                    
-                    imageURL = downloadURL.absoluteString 
                     // MARK: download Image
-                    
+                    imageURL = downloadURL.absoluteString
+                    addDataToFireStore()
                 }
                 
             } else {
@@ -78,27 +79,19 @@ class AddAthkar: UIViewController, UITextViewDelegate, UINavigationControllerDel
         })
     }
 
-    func addDataToFirebase() {
-        // MARK: add data  firebase + add downloadURL for image in storage
-        //        let uid = UserDefaults.standard.string(forKey: "uidKey")
+    func addDataToFireStore() {
+        // MARK: add data  FireStore + add downloadURL for image in storage
+        let UID = UserDefaults.standard.string(forKey: "UID")
         
-        let key = db.child("Athkar").childByAutoId().key
+        let key = dbFireStore.collection("Athkar").document().documentID
         
         if self.titleThekr.text == "" && self.textThekr.text == "" || self.textThekr.text == "وصف"  {
             print("الرجاء تعبئة الحقول")
             
         } else {
-            let UID = UserDefaults.standard.string(forKey: "UID")
-            let titleAndTextThekr = [
-                                     "title": self.titleThekr.text! ,
-                                     "text": self.textThekr.text! ,
-                                     "key": key ,
-                                     "UID": UID ,
-                                     "image": imageURL]
-            
-            db.child("Athkar").child(UID!).child(key!).setValue(titleAndTextThekr)
+            let Data = ["title": titleThekr.text!, "text": textThekr.text!, "ID": key, "image": imageURL, "UID": UID]
+            dbFireStore.collection("Athkar").document(key).setData(Data)
             self.delegate?.saveDone()
-            
             navigationController?.popViewController(animated: true)
         }
         

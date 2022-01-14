@@ -56,6 +56,7 @@ class UserSignUp: UIViewController {
                     self.signUpActivity.isHidden = false
                 }
             }
+            
         } else {
             print("error")
         }

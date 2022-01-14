@@ -26,11 +26,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Morning" translatesAutoresizingMaskIntoConstraints="NO" id="aAA-pO-mln">
+                                <rect key="frame" x="0.0" y="0.0" width="402" height="127"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="aAA-pO-mln" firstAttribute="top" secondItem="zis-8l-kSV" secondAttribute="top" id="8e3-8c-cuX"/>
+                            <constraint firstAttribute="trailing" secondItem="aAA-pO-mln" secondAttribute="trailing" id="BPJ-34-maC"/>
                             <constraint firstItem="sgQ-on-Plb" firstAttribute="centerY" secondItem="zis-8l-kSV" secondAttribute="centerY" id="Chl-Um-KHf"/>
                             <constraint firstItem="sgQ-on-Plb" firstAttribute="centerX" secondItem="zis-8l-kSV" secondAttribute="centerX" id="EcD-YS-QMK"/>
+                            <constraint firstAttribute="bottom" secondItem="aAA-pO-mln" secondAttribute="bottom" id="Lqe-Ph-DHX"/>
+                            <constraint firstItem="aAA-pO-mln" firstAttribute="leading" secondItem="zis-8l-kSV" secondAttribute="leading" id="Q7g-vH-6W6"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -50,6 +57,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Morning" width="456" height="228"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
