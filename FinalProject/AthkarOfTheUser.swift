@@ -14,57 +14,11 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     var dbFireStore = Firestore.firestore()
     var arrayAthkar = [Athkar]()
-
+    
     @IBOutlet weak var tableViewAthkar: UITableView!
     @IBOutlet weak var activityData: UIActivityIndicatorView!
     @IBOutlet weak var circleButton: UIButton!
     
-    
-    func saveDone() {
-        arrayAthkar.removeAll()
-        tableViewAthkar.reloadData()
-        getData()
-        
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        arrayAthkar.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewAthkar.dequeueReusableCell(withIdentifier: "Cell") as! AthkarOfTheUserCell
-        let item = arrayAthkar[indexPath.row]
-        cell.titleThekr.text = item.title
-        cell.textThekr.text = item.text
-        cell.imageThekr.sd_setImage(with: URL(string: item.image ?? ""), placeholderImage: UIImage(named: "imagePlaseHolder"))
-
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
-    }
-    
-    private func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    
-    
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-
-        let item = arrayAthkar[indexPath.row]
-        
-        dbFireStore.collection("Athkar").document(item.ID!).delete() { error in
-            if let error = error {
-                print("Error removing document: \(error)")
-            } else {
-                print("Document successfully removed!")
-            }
-        }
-        
-        arrayAthkar.remove(at: indexPath.row)
-        tableViewAthkar.deleteRows(at: [indexPath], with: .automatic)
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,15 +35,70 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
         getData()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        getData()
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        arrayAthkar.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableViewAthkar.dequeueReusableCell(withIdentifier: "Cell") as! AthkarOfTheUserCell
+        let item = arrayAthkar[indexPath.row]
+        cell.titleThekr.text = item.title
+        cell.imageThekr.sd_setImage(with: URL(string: item.image ?? ""), placeholderImage: UIImage(named: "imagePlaseHolder"))
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let item = arrayAthkar[indexPath.row]
+        
+        let update = storyboard?.instantiateViewController(withIdentifier: "UpdateVC") as! UpdateVC
+        
+        navigationController?.pushViewController(update, animated: true)
+        
+        update.titleView = item.title ?? ""
+        update.textView = item.text ?? ""
+//        update.imageView
+        
+    }
+    
+    private func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+
+        let item = arrayAthkar[indexPath.row]
+        
+        dbFireStore.collection("Athkar").document(item.ID!).delete() { error in
+            if let error = error {
+                print("Error removing document: \(error)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+        arrayAthkar.remove(at: indexPath.row)
+        tableViewAthkar.deleteRows(at: [indexPath], with: .automatic)
+    }
+    
+    func saveDone() {
+            arrayAthkar.removeAll()
+            tableViewAthkar.reloadData()
+            getData()
+            
+        }
     
     func getData() {
         activityData.startAnimating()
         activityData.isHidden = false
-        // MARK: get data from firbase
         
+        // MARK: get data from firbase
         dbFireStore.collection("Athkar").getDocuments() { (querySnapshot, err) in
             self.activityData.stopAnimating()
             self.activityData.isHidden = true

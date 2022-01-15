@@ -11,6 +11,8 @@ class AthkarCustomCell: UITableViewCell {
     
     @IBOutlet weak var Label: UILabel!
     @IBOutlet weak var viewContainer: UIView!
+    @IBOutlet weak var imageAthkarTableVC: UIImageView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

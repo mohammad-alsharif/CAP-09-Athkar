@@ -16,14 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="544" height="177"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swv-Z1-Z6S">
-                        <rect key="frame" x="174" y="20" width="350" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csb-zW-bet">
-                        <rect key="frame" x="174" y="106" width="350" height="36"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swv-Z1-Z6S">
+                        <rect key="frame" x="174" y="50" width="350" height="36"/>
                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -36,21 +30,17 @@
                     </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="csb-zW-bet" firstAttribute="leading" secondItem="mta-OF-OkR" secondAttribute="trailing" constant="20" id="39h-0v-oiX"/>
-                    <constraint firstAttribute="trailing" secondItem="csb-zW-bet" secondAttribute="trailing" constant="20" id="7iN-XV-eEN"/>
                     <constraint firstItem="mta-OF-OkR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Lhr-Bw-qwL"/>
                     <constraint firstAttribute="trailing" secondItem="swv-Z1-Z6S" secondAttribute="trailing" constant="20" id="Pte-Yt-VwW"/>
                     <constraint firstItem="mta-OF-OkR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ZrE-MI-I0Z"/>
                     <constraint firstItem="swv-Z1-Z6S" firstAttribute="leading" secondItem="mta-OF-OkR" secondAttribute="trailing" constant="20" id="geT-hP-Yty"/>
                     <constraint firstAttribute="bottomMargin" secondItem="mta-OF-OkR" secondAttribute="bottom" constant="15" id="ifN-Se-KSB"/>
-                    <constraint firstItem="csb-zW-bet" firstAttribute="top" secondItem="swv-Z1-Z6S" secondAttribute="bottom" constant="50" id="oEO-g9-Yqz"/>
-                    <constraint firstItem="swv-Z1-Z6S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="yxM-kR-ZPZ"/>
+                    <constraint firstItem="swv-Z1-Z6S" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="50" id="yxM-kR-ZPZ"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="imageThekr" destination="mta-OF-OkR" id="tzl-zg-Kn6"/>
-                <outlet property="textThekr" destination="csb-zW-bet" id="ELU-HC-c9g"/>
                 <outlet property="titleThekr" destination="swv-Z1-Z6S" id="8rk-C7-SnA"/>
             </connections>
             <point key="canvasLocation" x="113.04347826086958" y="31.808035714285712"/>

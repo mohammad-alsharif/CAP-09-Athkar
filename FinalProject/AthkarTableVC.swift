@@ -10,10 +10,9 @@ import Firebase
 
 class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var array = ["أذكار الصباح", "أذكار المساء", "أذكار الصلاة" ,"أذكار النوم"]
+    var array = ["أذكار الصباح", "أذكار المساء", "أذكار الصلاة", "أذكار الطعام", "أذكار النوم"]
+    
     @IBOutlet weak var tableViewAthkar: UITableView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,21 +30,19 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
         return array.count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Athkar"
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewAthkar.dequeueReusableCell(withIdentifier: "Cell") as! AthkarCustomCell
         cell.Label.text = array[indexPath.row]
         if indexPath.row == 0 {
-            cell.viewContainer.backgroundColor = UIColor.blue
+            cell.imageAthkarTableVC.image = UIImage(named: "Morning Athkar")
         } else if indexPath.row == 1 {
-            cell.viewContainer.backgroundColor = UIColor.red
+            cell.imageAthkarTableVC.image = UIImage(named: "Night Athkar")
         } else if indexPath.row == 2 {
-            cell.viewContainer.backgroundColor = UIColor.brown
+            cell.imageAthkarTableVC.image = UIImage(named: "Prayer Athkar")
+        } else if indexPath.row == 3 {
+            cell.imageAthkarTableVC.image = UIImage(named: "Food Athkar")
         } else {
-            cell.viewContainer.backgroundColor = UIColor.green
+            cell.imageAthkarTableVC.image = UIImage(named: "Sleep Athkar")
         }
         return cell
     }
@@ -64,9 +61,9 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 self.navigationController?.pushViewController(AddNoteVC, animated: true)
                 
             } else {
-                let alert = UIAlertController(title: "Hello", message: "You must signUp in App", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "مرحباً", message: "يجب عليك التسجيل في التطبيق", preferredStyle: UIAlertController.Style.alert)
                 
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { UIAlertAction in
+                alert.addAction(UIAlertAction(title: "حسناً", style: UIAlertAction.Style.default, handler: { UIAlertAction in
                     let appDelegate = AppDelegate()
                     appDelegate.firstPage()
                 }))

@@ -30,7 +30,7 @@ class UserLogin: UIViewController {
         Auth.auth().signIn(withEmail: loginEmail.text!, password: loginPassword.text!) { result, error in
             if error == nil {
                 self.loginActivity.isHidden = false
-                self.loginInformation.text = "You are logged in successfully"
+                self.loginInformation.text = "تم تسحيل الدخول بنجاح"
                 self.loginInformation.textColor = UIColor.green
                 print(result?.user.uid ?? "")
                 

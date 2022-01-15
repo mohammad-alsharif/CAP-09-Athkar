@@ -32,7 +32,7 @@ class UserSignUp: UIViewController {
                 
                 if error == nil {
                     self.signUpActivity.isHidden = false
-                    self.registrationInformation.text = "You have been successfully registered"
+                    self.registrationInformation.text = "تم تسجيلك بنجاح"
                     self.registrationInformation.textColor = UIColor.green
                     
                     let uidSignUp = result?.user.uid

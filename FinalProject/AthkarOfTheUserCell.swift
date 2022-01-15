@@ -10,7 +10,6 @@ import UIKit
 class AthkarOfTheUserCell: UITableViewCell {
     
     @IBOutlet weak var titleThekr: UILabel!
-    @IBOutlet weak var textThekr: UILabel!
     @IBOutlet weak var imageThekr: UIImageView!
     
     
