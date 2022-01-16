@@ -23,6 +23,8 @@ class AthkarOfTheUser: UIViewController, UITableViewDelegate, UITableViewDataSou
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewAthkar.backgroundColor = UIColor(named: "Background")
+        
         circleButton.layer.cornerRadius = circleButton.bounds.height / 2
         circleButton.layer.borderColor = UIColor.white.cgColor
         circleButton.layer.borderWidth = 10

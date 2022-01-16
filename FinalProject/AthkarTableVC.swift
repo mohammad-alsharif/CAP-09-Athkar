@@ -23,7 +23,7 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            100
+            136
         }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,8 +48,14 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
         let AthkarAlsabah = self.storyboard?.instantiateViewController(withIdentifier: "AthkaAlSabah") as! AthkarCollectionVC
         navigationController?.pushViewController(AthkarAlsabah, animated: true)
+            
+        } else {
+            let AddNoteVC = self.storyboard?.instantiateViewController(withIdentifier: "AthkarOfTheUser") as! AthkarOfTheUser
+            self.navigationController?.pushViewController(AddNoteVC, animated: true)
+        }
     }
     
     
@@ -61,7 +67,7 @@ class AthkarTableVC: UIViewController, UITableViewDelegate, UITableViewDataSourc
                 self.navigationController?.pushViewController(AddNoteVC, animated: true)
                 
             } else {
-                let alert = UIAlertController(title: "مرحباً", message: "يجب عليك التسجيل في التطبيق", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "مرحباً", message: "يجب عليك عمل حساب لإستخدام هذه الميزة", preferredStyle: UIAlertController.Style.alert)
                 
                 alert.addAction(UIAlertAction(title: "حسناً", style: UIAlertAction.Style.default, handler: { UIAlertAction in
                     let appDelegate = AppDelegate()

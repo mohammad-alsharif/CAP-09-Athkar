@@ -9,6 +9,8 @@ import UIKit
 
 class AthkarCollectionPage: UICollectionViewCell {
     
+    var arrayAthkar = String()
+    
     @IBOutlet weak var widthConstraint: NSLayoutConstraint!
     @IBOutlet weak var heightConstraint: NSLayoutConstraint!
     

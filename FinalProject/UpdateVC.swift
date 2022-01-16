@@ -8,7 +8,12 @@
 import UIKit
 import FirebaseFirestore
 
-class UpdateVC: UIViewController {
+class UpdateVC: UIViewController, AthkarDelegte {
+    
+    func saveDone() {
+        updateData()
+    }
+    
     
     struct Athkar {
         var title: String?
@@ -17,7 +22,7 @@ class UpdateVC: UIViewController {
         var image: String?
         var UID: String?
     }
-    
+    var delegate : AthkarDelegte?
     let dbFireStore = Firestore.firestore()
     let item = Athkar.init(title: "title", text: "text", ID: "id", image: "image", UID: "UID")
     
@@ -36,24 +41,23 @@ class UpdateVC: UIViewController {
         titleUpdate.text = titleView
         textUpdate.text = textView
         imageUpdate.image = imageView
+        
     }
+    
+    func updateData() {
+        let updateAthkar = ["title": titleUpdate.text!, "text": textUpdate.text!]
+               
+               dbFireStore.collection("Athkar").document(item.ID!).updateData(updateAthkar)
+               
+               
+               
+               let updateDoneVC = storyboard?.instantiateViewController(withIdentifier: "AddAthkar") as! AddAthkar
+               navigationController?.popViewController(animated: true)
+           }
+    
     
     @IBAction func update(_ sender: UIButton) {
-        
-        
-        
-        dbFireStore.collection("Athkar").document(item.ID!).updateData(["Athkar": FieldValue.delete(),
-        ]) { error in
-            
-            if let error = error {
-                print("Error updating document: \(error)")
-            } else {
-                print("Document successfully updated")
-            }
-        }
-        
-        let updateDoneVC = storyboard?.instantiateViewController(withIdentifier: "AddAthkar") as! AddAthkar
-        navigationController?.popViewController(animated: true)
-    }
-    
+       updateData()
+        self.delegate?.saveDone()
+}
 }
