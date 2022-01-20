@@ -207,7 +207,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="TabBar" id="i9R-Bm-i3m" customClass="TabBar" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="WNv-xP-6Mx"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="Qebla" id="7TX-zf-LeC">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7TX-zf-LeC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -432,13 +432,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تغير الي الوضع الليلي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-MX-Nn0">
-                                <rect key="frame" x="237" y="104" width="137" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="تفعيل الوضع الليلي" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIl-MX-Nn0">
+                                <rect key="frame" x="250" y="104" width="124" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-YT-wr0">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aoN-YT-wr0">
                                 <rect key="frame" x="16" y="104" width="51" height="31"/>
                                 <color key="onTintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
@@ -949,15 +949,27 @@
             </objects>
             <point key="canvasLocation" x="5637" y="867"/>
         </scene>
-        <!--Quran PageVC-->
+        <!--QuranVC-->
         <scene sceneID="4I3-p6-0hX">
             <objects>
-                <viewController id="aBs-jS-Gut" customClass="QuranPageVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aBs-jS-Gut" customClass="QuranVC" customModule="FinalProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fnf-db-Cxd">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BQI-w5-hBr" customClass="pdfView">
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="c7R-WP-lE6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BQI-w5-hBr" firstAttribute="leading" secondItem="c7R-WP-lE6" secondAttribute="leading" id="3kq-h6-X1P"/>
+                            <constraint firstItem="BQI-w5-hBr" firstAttribute="top" secondItem="Fnf-db-Cxd" secondAttribute="top" id="7dU-Jp-5N3"/>
+                            <constraint firstItem="c7R-WP-lE6" firstAttribute="trailing" secondItem="BQI-w5-hBr" secondAttribute="trailing" id="n0O-2G-gLZ"/>
+                            <constraint firstAttribute="bottom" secondItem="BQI-w5-hBr" secondAttribute="bottom" id="qRA-Q6-eLF"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AxM-c1-jaV"/>
                 </viewController>

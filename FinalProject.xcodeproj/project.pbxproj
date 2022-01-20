@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		2A995D954268CD0177FBC9D1 /* Pods_FinalProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A06F9C2ECCB951F9D9071DF /* Pods_FinalProject.framework */; };
 		5A33465E2771FBF7002E29E1 /* AthkarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A33465D2771FBF7002E29E1 /* AthkarVC.swift */; };
-		5A3B8D12277B95F300F6D545 /* quran.json in Resources */ = {isa = PBXBuildFile; fileRef = 5A3B8D11277B95F300F6D545 /* quran.json */; };
-		5A3B8D15277B978000F6D545 /* Quran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B8D14277B978000F6D545 /* Quran.swift */; };
 		5A3B8D17277B985700F6D545 /* QuranVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B8D16277B985700F6D545 /* QuranVC.swift */; };
 		5A3B8D1A277B989800F6D545 /* QuranCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B8D18277B989800F6D545 /* QuranCollectionCell.swift */; };
 		5A3B8D1B277B989800F6D545 /* QuranCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3B8D19277B989800F6D545 /* QuranCollectionCell.xib */; };
@@ -30,17 +28,16 @@
 		5A7DDF6E27672BEF005B9059 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF6D27672BEF005B9059 /* UserLogin.swift */; };
 		5A7DDF702768C0C5005B9059 /* Sebha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF6F2768C0C5005B9059 /* Sebha.swift */; };
 		5A7E595327919F6E001A11E1 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E595227919F6E001A11E1 /* UpdateVC.swift */; };
-		5A7E597127959B25001A11E1 /* SebhaCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E597027959B25001A11E1 /* SebhaCounter.swift */; };
 		5A9CCD3C276D11B6001989D6 /* NavigationLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */; };
 		5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3F276DFFDD001989D6 /* TabBar.swift */; };
 		5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */; };
 		5A9CCD46276F1BC9001989D6 /* AthkarOfTheUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */; };
 		5A9CCD69276F4459001989D6 /* AthkarOfTheUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD67276F4459001989D6 /* AthkarOfTheUserCell.swift */; };
 		5A9CCD6A276F4459001989D6 /* AthkarOfTheUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A9CCD68276F4459001989D6 /* AthkarOfTheUserCell.xib */; };
-		5A9CCD6C27707B4A001989D6 /* quran.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD6B27707B4A001989D6 /* quran.swift */; };
 		5ACB04DA2776076A00333C0F /* AthkarCollectionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB04D82776076A00333C0F /* AthkarCollectionPage.swift */; };
 		5ACB04DB2776076A00333C0F /* AthkarCollectionPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACB04D92776076A00333C0F /* AthkarCollectionPage.xib */; };
 		5ACB04DD2776106B00333C0F /* AthkarCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB04DC2776106B00333C0F /* AthkarCollectionVC.swift */; };
+		5AE0D8C7279986F400B66385 /* Quran.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5AE0D8C6279986F400B66385 /* Quran.pdf */; };
 		8E770BE62798994A00351200 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BE32798994900351200 /* LocationDelegate.swift */; };
 		8E770BE72798994A00351200 /* UserDefauts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BE42798994A00351200 /* UserDefauts+Extensions.swift */; };
 		8E770BE82798994A00351200 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BE52798994A00351200 /* CLLocation+Extension.swift */; };
@@ -52,8 +49,6 @@
 		22A450E12899B8524CD24256 /* Pods-FinalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.debug.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.debug.xcconfig"; sourceTree = "<group>"; };
 		4A06F9C2ECCB951F9D9071DF /* Pods_FinalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A33465D2771FBF7002E29E1 /* AthkarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarVC.swift; sourceTree = "<group>"; };
-		5A3B8D11277B95F300F6D545 /* quran.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = quran.json; sourceTree = "<group>"; };
-		5A3B8D14277B978000F6D545 /* Quran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quran.swift; sourceTree = "<group>"; };
 		5A3B8D16277B985700F6D545 /* QuranVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranVC.swift; sourceTree = "<group>"; };
 		5A3B8D18277B989800F6D545 /* QuranCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranCollectionCell.swift; sourceTree = "<group>"; };
 		5A3B8D19277B989800F6D545 /* QuranCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranCollectionCell.xib; sourceTree = "<group>"; };
@@ -75,14 +70,12 @@
 		5A7DDF6D27672BEF005B9059 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		5A7DDF6F2768C0C5005B9059 /* Sebha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sebha.swift; sourceTree = "<group>"; };
 		5A7E595227919F6E001A11E1 /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
-		5A7E597027959B25001A11E1 /* SebhaCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SebhaCounter.swift; sourceTree = "<group>"; };
 		5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLogin.swift; sourceTree = "<group>"; };
 		5A9CCD3F276DFFDD001989D6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAthkar.swift; sourceTree = "<group>"; };
 		5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarOfTheUser.swift; sourceTree = "<group>"; };
 		5A9CCD67276F4459001989D6 /* AthkarOfTheUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarOfTheUserCell.swift; sourceTree = "<group>"; };
 		5A9CCD68276F4459001989D6 /* AthkarOfTheUserCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AthkarOfTheUserCell.xib; sourceTree = "<group>"; };
-		5A9CCD6B27707B4A001989D6 /* quran.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quran.swift; sourceTree = "<group>"; };
 		5ACB04D82776076A00333C0F /* AthkarCollectionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarCollectionPage.swift; sourceTree = "<group>"; };
 		5ACB04D92776076A00333C0F /* AthkarCollectionPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AthkarCollectionPage.xib; sourceTree = "<group>"; };
 		5ACB04DC2776106B00333C0F /* AthkarCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarCollectionVC.swift; sourceTree = "<group>"; };
@@ -98,6 +91,7 @@
 		5AE0D8C02799652800B66385 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE0D8C22799652B00B66385 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE0D8C42799653400B66385 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8C6279986F400B66385 /* Quran.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Quran.pdf; path = PDF/Quran.pdf; sourceTree = SOURCE_ROOT; };
 		76CF9233D362D3611B94E0CC /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
 		8E770BE32798994900351200 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
 		8E770BE42798994A00351200 /* UserDefauts+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefauts+Extensions.swift"; sourceTree = "<group>"; };
@@ -130,7 +124,6 @@
 		5A3B8D13277B96E100F6D545 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				5A3B8D14277B978000F6D545 /* Quran.swift */,
 				5A3B8D1C277C5AB100F6D545 /* Athkar.swift */,
 			);
 			path = Model;
@@ -157,7 +150,6 @@
 		5A7DDF1127652E32005B9059 /* FinalProject */ = {
 			isa = PBXGroup;
 			children = (
-				5A3B8D11277B95F300F6D545 /* quran.json */,
 				5A7DDF1227652E32005B9059 /* AppDelegate.swift */,
 				5A7DDF1427652E32005B9059 /* SceneDelegate.swift */,
 				5A3B8D13277B96E100F6D545 /* Model */,
@@ -165,6 +157,7 @@
 				8E770BED27989FF300351200 /* View */,
 				5A7DDF1827652E32005B9059 /* Main.storyboard */,
 				5A7DDF1B27652E35005B9059 /* Assets.xcassets */,
+				5AE0D8C6279986F400B66385 /* Quran.pdf */,
 				5A7DDF1D27652E35005B9059 /* LaunchScreen.storyboard */,
 				5A7DDF5A27670771005B9059 /* GoogleService-Info.plist */,
 				5A7DDF2027652E35005B9059 /* Info.plist */,
@@ -188,9 +181,7 @@
 			children = (
 				8E770BEE2798A02F00351200 /* AuthUser */,
 				8E770BF12798A0AB00351200 /* TabbarVC */,
-				5A7E597027959B25001A11E1 /* SebhaCounter.swift */,
 				5A3B8D16277B985700F6D545 /* QuranVC.swift */,
-				5A9CCD6B27707B4A001989D6 /* quran.swift */,
 				5A33465D2771FBF7002E29E1 /* AthkarVC.swift */,
 				5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */,
 				5A7E595227919F6E001A11E1 /* UpdateVC.swift */,
@@ -321,8 +312,8 @@
 			files = (
 				5A3B8D1B277B989800F6D545 /* QuranCollectionCell.xib in Resources */,
 				5A9CCD6A276F4459001989D6 /* AthkarOfTheUserCell.xib in Resources */,
-				5A3B8D12277B95F300F6D545 /* quran.json in Resources */,
 				5A7DDF1F27652E35005B9059 /* LaunchScreen.storyboard in Resources */,
+				5AE0D8C7279986F400B66385 /* Quran.pdf in Resources */,
 				5A7DDF1C27652E35005B9059 /* Assets.xcassets in Resources */,
 				5A7DDF5B27670771005B9059 /* GoogleService-Info.plist in Resources */,
 				5A7DDF1A27652E32005B9059 /* Main.storyboard in Resources */,
@@ -390,7 +381,6 @@
 				5A9CCD69276F4459001989D6 /* AthkarOfTheUserCell.swift in Sources */,
 				5A33465E2771FBF7002E29E1 /* AthkarVC.swift in Sources */,
 				5A7DDF2F27660FCB005B9059 /* AthkarTableVC.swift in Sources */,
-				5A3B8D15277B978000F6D545 /* Quran.swift in Sources */,
 				8E770BE82798994A00351200 /* CLLocation+Extension.swift in Sources */,
 				5A3B8D23277F7D4000F6D545 /* QuranPageVC.swift in Sources */,
 				8E770BE72798994A00351200 /* UserDefauts+Extensions.swift in Sources */,
@@ -400,12 +390,10 @@
 				8E770BE62798994A00351200 /* LocationDelegate.swift in Sources */,
 				5A9CCD46276F1BC9001989D6 /* AthkarOfTheUser.swift in Sources */,
 				5A3B8D17277B985700F6D545 /* QuranVC.swift in Sources */,
-				5A7E597127959B25001A11E1 /* SebhaCounter.swift in Sources */,
 				5A7DDF6C27672BC6005B9059 /* UserSignUp.swift in Sources */,
 				5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */,
 				5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */,
 				5ACB04DD2776106B00333C0F /* AthkarCollectionVC.swift in Sources */,
-				5A9CCD6C27707B4A001989D6 /* quran.swift in Sources */,
 				8E770BF02798A05B00351200 /* SettingsVC.swift in Sources */,
 				5A7DDF6E27672BEF005B9059 /* UserLogin.swift in Sources */,
 				5A7DDF1527652E32005B9059 /* SceneDelegate.swift in Sources */,
@@ -558,9 +546,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TS4PZ2XB23;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "الباقيات";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -588,9 +577,10 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = TS4PZ2XB23;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "الباقيات";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
