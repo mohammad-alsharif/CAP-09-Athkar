@@ -15,7 +15,6 @@
 		5A3B8D1A277B989800F6D545 /* QuranCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B8D18277B989800F6D545 /* QuranCollectionCell.swift */; };
 		5A3B8D1B277B989800F6D545 /* QuranCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A3B8D19277B989800F6D545 /* QuranCollectionCell.xib */; };
 		5A3B8D1D277C5AB100F6D545 /* Athkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B8D1C277C5AB100F6D545 /* Athkar.swift */; };
-		5A3B8D1F277F7B7C00F6D545 /* Quran.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5A3B8D1E277F7B7B00F6D545 /* Quran.pdf */; };
 		5A3B8D23277F7D4000F6D545 /* QuranPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3B8D22277F7D4000F6D545 /* QuranPageVC.swift */; };
 		5A7DDF1327652E32005B9059 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF1227652E32005B9059 /* AppDelegate.swift */; };
 		5A7DDF1527652E32005B9059 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF1427652E32005B9059 /* SceneDelegate.swift */; };
@@ -30,13 +29,8 @@
 		5A7DDF6C27672BC6005B9059 /* UserSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF6B27672BC6005B9059 /* UserSignUp.swift */; };
 		5A7DDF6E27672BEF005B9059 /* UserLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF6D27672BEF005B9059 /* UserLogin.swift */; };
 		5A7DDF702768C0C5005B9059 /* Sebha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7DDF6F2768C0C5005B9059 /* Sebha.swift */; };
-		5A7E5949278E207E001A11E1 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7E5948278E207E001A11E1 /* FirebaseAnalytics */; };
-		5A7E594B278E207E001A11E1 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7E594A278E207E001A11E1 /* FirebaseAuth */; };
-		5A7E594D278E207E001A11E1 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7E594C278E207E001A11E1 /* FirebaseDatabase */; };
-		5A7E594F278E207E001A11E1 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7E594E278E207E001A11E1 /* FirebaseFirestore */; };
-		5A7E5951278E207E001A11E1 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7E5950278E207E001A11E1 /* FirebaseStorage */; };
 		5A7E595327919F6E001A11E1 /* UpdateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E595227919F6E001A11E1 /* UpdateVC.swift */; };
-		5A874EB2276B32CE0094913E /* AthkaryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A874EB1276B32CE0094913E /* AthkaryVC.swift */; };
+		5A7E597127959B25001A11E1 /* SebhaCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7E597027959B25001A11E1 /* SebhaCounter.swift */; };
 		5A9CCD3C276D11B6001989D6 /* NavigationLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */; };
 		5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD3F276DFFDD001989D6 /* TabBar.swift */; };
 		5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */; };
@@ -47,7 +41,11 @@
 		5ACB04DA2776076A00333C0F /* AthkarCollectionPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB04D82776076A00333C0F /* AthkarCollectionPage.swift */; };
 		5ACB04DB2776076A00333C0F /* AthkarCollectionPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5ACB04D92776076A00333C0F /* AthkarCollectionPage.xib */; };
 		5ACB04DD2776106B00333C0F /* AthkarCollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB04DC2776106B00333C0F /* AthkarCollectionVC.swift */; };
-		5ACB04DF27778F4800333C0F /* FirstPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB04DE27778F4800333C0F /* FirstPage.swift */; };
+		8E770BE62798994A00351200 /* LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BE32798994900351200 /* LocationDelegate.swift */; };
+		8E770BE72798994A00351200 /* UserDefauts+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BE42798994A00351200 /* UserDefauts+Extensions.swift */; };
+		8E770BE82798994A00351200 /* CLLocation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BE52798994A00351200 /* CLLocation+Extension.swift */; };
+		8E770BEB2798996700351200 /* CompassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BEA2798996700351200 /* CompassViewController.swift */; };
+		8E770BF02798A05B00351200 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E770BEF2798A05B00351200 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +58,6 @@
 		5A3B8D18277B989800F6D545 /* QuranCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranCollectionCell.swift; sourceTree = "<group>"; };
 		5A3B8D19277B989800F6D545 /* QuranCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuranCollectionCell.xib; sourceTree = "<group>"; };
 		5A3B8D1C277C5AB100F6D545 /* Athkar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athkar.swift; sourceTree = "<group>"; };
-		5A3B8D1E277F7B7B00F6D545 /* Quran.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Quran.pdf; sourceTree = "<group>"; };
 		5A3B8D22277F7D4000F6D545 /* QuranPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranPageVC.swift; sourceTree = "<group>"; };
 		5A7DDF0F27652E32005B9059 /* FinalProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A7DDF1227652E32005B9059 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +75,7 @@
 		5A7DDF6D27672BEF005B9059 /* UserLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLogin.swift; sourceTree = "<group>"; };
 		5A7DDF6F2768C0C5005B9059 /* Sebha.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sebha.swift; sourceTree = "<group>"; };
 		5A7E595227919F6E001A11E1 /* UpdateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateVC.swift; sourceTree = "<group>"; };
-		5A874EB1276B32CE0094913E /* AthkaryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkaryVC.swift; sourceTree = "<group>"; };
+		5A7E597027959B25001A11E1 /* SebhaCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SebhaCounter.swift; sourceTree = "<group>"; };
 		5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationLogin.swift; sourceTree = "<group>"; };
 		5A9CCD3F276DFFDD001989D6 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAthkar.swift; sourceTree = "<group>"; };
@@ -89,8 +86,24 @@
 		5ACB04D82776076A00333C0F /* AthkarCollectionPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarCollectionPage.swift; sourceTree = "<group>"; };
 		5ACB04D92776076A00333C0F /* AthkarCollectionPage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AthkarCollectionPage.xib; sourceTree = "<group>"; };
 		5ACB04DC2776106B00333C0F /* AthkarCollectionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthkarCollectionVC.swift; sourceTree = "<group>"; };
-		5ACB04DE27778F4800333C0F /* FirstPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPage.swift; sourceTree = "<group>"; };
+		5AE0D8AE2799650600B66385 /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8B02799650A00B66385 /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8B22799650E00B66385 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8B42799651200B66385 /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8B62799651500B66385 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8B82799651900B66385 /* FirebaseFirestore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseFirestore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8BA2799651C00B66385 /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8BC2799651F00B66385 /* FirebaseStorage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseStorage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8BE2799652300B66385 /* grpcpp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = grpcpp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8C02799652800B66385 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GTMSessionFetcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8C22799652B00B66385 /* HGCircularSlider.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HGCircularSlider.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AE0D8C42799653400B66385 /* FBLPromises.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBLPromises.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76CF9233D362D3611B94E0CC /* Pods-FinalProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinalProject.release.xcconfig"; path = "Target Support Files/Pods-FinalProject/Pods-FinalProject.release.xcconfig"; sourceTree = "<group>"; };
+		8E770BE32798994900351200 /* LocationDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationDelegate.swift; sourceTree = "<group>"; };
+		8E770BE42798994A00351200 /* UserDefauts+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefauts+Extensions.swift"; sourceTree = "<group>"; };
+		8E770BE52798994A00351200 /* CLLocation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+Extension.swift"; sourceTree = "<group>"; };
+		8E770BEA2798996700351200 /* CompassViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompassViewController.swift; sourceTree = "<group>"; };
+		8E770BEF2798A05B00351200 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A7E5949278E207E001A11E1 /* FirebaseAnalytics in Frameworks */,
-				5A7E594B278E207E001A11E1 /* FirebaseAuth in Frameworks */,
-				5A7E594D278E207E001A11E1 /* FirebaseDatabase in Frameworks */,
-				5A7E594F278E207E001A11E1 /* FirebaseFirestore in Frameworks */,
 				2A995D954268CD0177FBC9D1 /* Pods_FinalProject.framework in Frameworks */,
-				5A7E5951278E207E001A11E1 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,34 +161,10 @@
 				5A7DDF1227652E32005B9059 /* AppDelegate.swift */,
 				5A7DDF1427652E32005B9059 /* SceneDelegate.swift */,
 				5A3B8D13277B96E100F6D545 /* Model */,
-				5A7DDF6D27672BEF005B9059 /* UserLogin.swift */,
-				5A7DDF6B27672BC6005B9059 /* UserSignUp.swift */,
-				5A7DDF1627652E32005B9059 /* ViewController.swift */,
-				5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */,
-				5A9CCD3F276DFFDD001989D6 /* TabBar.swift */,
-				5A7DDF6F2768C0C5005B9059 /* Sebha.swift */,
-				5A3B8D16277B985700F6D545 /* QuranVC.swift */,
-				5A3B8D22277F7D4000F6D545 /* QuranPageVC.swift */,
-				5A3B8D18277B989800F6D545 /* QuranCollectionCell.swift */,
-				5A3B8D19277B989800F6D545 /* QuranCollectionCell.xib */,
-				5ACB04DE27778F4800333C0F /* FirstPage.swift */,
-				5A874EB1276B32CE0094913E /* AthkaryVC.swift */,
-				5A9CCD6B27707B4A001989D6 /* quran.swift */,
-				5A33465D2771FBF7002E29E1 /* AthkarVC.swift */,
-				5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */,
-				5A7E595227919F6E001A11E1 /* UpdateVC.swift */,
-				5A7DDF2E27660FCB005B9059 /* AthkarTableVC.swift */,
-				5A7DDF3027661000005B9059 /* AthkarCustomCell.swift */,
-				5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */,
-				5A9CCD67276F4459001989D6 /* AthkarOfTheUserCell.swift */,
-				5ACB04DC2776106B00333C0F /* AthkarCollectionVC.swift */,
-				5ACB04D82776076A00333C0F /* AthkarCollectionPage.swift */,
-				5A9CCD68276F4459001989D6 /* AthkarOfTheUserCell.xib */,
-				5A7DDF3127661000005B9059 /* AthkarCustomCell.xib */,
-				5ACB04D92776076A00333C0F /* AthkarCollectionPage.xib */,
+				8E770BEC27989FC500351200 /* Controller */,
+				8E770BED27989FF300351200 /* View */,
 				5A7DDF1827652E32005B9059 /* Main.storyboard */,
 				5A7DDF1B27652E35005B9059 /* Assets.xcassets */,
-				5A3B8D1E277F7B7B00F6D545 /* Quran.pdf */,
 				5A7DDF1D27652E35005B9059 /* LaunchScreen.storyboard */,
 				5A7DDF5A27670771005B9059 /* GoogleService-Info.plist */,
 				5A7DDF2027652E35005B9059 /* Info.plist */,
@@ -188,9 +172,88 @@
 			path = FinalProject;
 			sourceTree = "<group>";
 		};
+		8E770BE92798995300351200 /* qibla */ = {
+			isa = PBXGroup;
+			children = (
+				8E770BEA2798996700351200 /* CompassViewController.swift */,
+				8E770BE52798994A00351200 /* CLLocation+Extension.swift */,
+				8E770BE32798994900351200 /* LocationDelegate.swift */,
+				8E770BE42798994A00351200 /* UserDefauts+Extensions.swift */,
+			);
+			path = qibla;
+			sourceTree = "<group>";
+		};
+		8E770BEC27989FC500351200 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E770BEE2798A02F00351200 /* AuthUser */,
+				8E770BF12798A0AB00351200 /* TabbarVC */,
+				5A7E597027959B25001A11E1 /* SebhaCounter.swift */,
+				5A3B8D16277B985700F6D545 /* QuranVC.swift */,
+				5A9CCD6B27707B4A001989D6 /* quran.swift */,
+				5A33465D2771FBF7002E29E1 /* AthkarVC.swift */,
+				5A9CCD43276F1A1C001989D6 /* AddAthkar.swift */,
+				5A7E595227919F6E001A11E1 /* UpdateVC.swift */,
+				5ACB04DC2776106B00333C0F /* AthkarCollectionVC.swift */,
+				5A7DDF1627652E32005B9059 /* ViewController.swift */,
+				8E770BE92798995300351200 /* qibla */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E770BED27989FF300351200 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A3B8D18277B989800F6D545 /* QuranCollectionCell.swift */,
+				5A3B8D19277B989800F6D545 /* QuranCollectionCell.xib */,
+				5A7DDF3027661000005B9059 /* AthkarCustomCell.swift */,
+				5A9CCD67276F4459001989D6 /* AthkarOfTheUserCell.swift */,
+				5ACB04D82776076A00333C0F /* AthkarCollectionPage.swift */,
+				5A9CCD68276F4459001989D6 /* AthkarOfTheUserCell.xib */,
+				5A7DDF3127661000005B9059 /* AthkarCustomCell.xib */,
+				5ACB04D92776076A00333C0F /* AthkarCollectionPage.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E770BEE2798A02F00351200 /* AuthUser */ = {
+			isa = PBXGroup;
+			children = (
+				5A7DDF6B27672BC6005B9059 /* UserSignUp.swift */,
+				5A7DDF6D27672BEF005B9059 /* UserLogin.swift */,
+				5A9CCD3B276D11B5001989D6 /* NavigationLogin.swift */,
+			);
+			path = AuthUser;
+			sourceTree = "<group>";
+		};
+		8E770BF12798A0AB00351200 /* TabbarVC */ = {
+			isa = PBXGroup;
+			children = (
+				8E770BEF2798A05B00351200 /* SettingsVC.swift */,
+				5A9CCD3F276DFFDD001989D6 /* TabBar.swift */,
+				5A7DDF6F2768C0C5005B9059 /* Sebha.swift */,
+				5A3B8D22277F7D4000F6D545 /* QuranPageVC.swift */,
+				5A7DDF2E27660FCB005B9059 /* AthkarTableVC.swift */,
+				5A9CCD45276F1BC9001989D6 /* AthkarOfTheUser.swift */,
+			);
+			path = TabbarVC;
+			sourceTree = "<group>";
+		};
 		EC281B1F7C03040C4EBCC1AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AE0D8C42799653400B66385 /* FBLPromises.framework */,
+				5AE0D8C22799652B00B66385 /* HGCircularSlider.framework */,
+				5AE0D8C02799652800B66385 /* GTMSessionFetcher.framework */,
+				5AE0D8BE2799652300B66385 /* grpcpp.framework */,
+				5AE0D8BC2799651F00B66385 /* FirebaseStorage.framework */,
+				5AE0D8BA2799651C00B66385 /* FirebaseInstallations.framework */,
+				5AE0D8B82799651900B66385 /* FirebaseFirestore.framework */,
+				5AE0D8B62799651500B66385 /* FirebaseCoreDiagnostics.framework */,
+				5AE0D8B42799651200B66385 /* FirebaseCore.framework */,
+				5AE0D8B22799650E00B66385 /* FirebaseAuth.framework */,
+				5AE0D8B02799650A00B66385 /* openssl_grpc.framework */,
+				5AE0D8AE2799650600B66385 /* absl.framework */,
 				4A06F9C2ECCB951F9D9071DF /* Pods_FinalProject.framework */,
 			);
 			name = Frameworks;
@@ -207,20 +270,13 @@
 				5A7DDF0B27652E32005B9059 /* Sources */,
 				5A7DDF0C27652E32005B9059 /* Frameworks */,
 				5A7DDF0D27652E32005B9059 /* Resources */,
-				24632505DE4A3AF2E0F93CD3 /* [CP] Embed Pods Frameworks */,
+				F7E4B0C9B24B39790538465F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FinalProject;
-			packageProductDependencies = (
-				5A7E5948278E207E001A11E1 /* FirebaseAnalytics */,
-				5A7E594A278E207E001A11E1 /* FirebaseAuth */,
-				5A7E594C278E207E001A11E1 /* FirebaseDatabase */,
-				5A7E594E278E207E001A11E1 /* FirebaseFirestore */,
-				5A7E5950278E207E001A11E1 /* FirebaseStorage */,
-			);
 			productName = FinalProject;
 			productReference = 5A7DDF0F27652E32005B9059 /* FinalProject.app */;
 			productType = "com.apple.product-type.application";
@@ -249,9 +305,6 @@
 				Base,
 			);
 			mainGroup = 5A7DDF0627652E32005B9059;
-			packageReferences = (
-				5A7E5947278E207E001A11E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-			);
 			productRefGroup = 5A7DDF1027652E32005B9059 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -268,7 +321,6 @@
 			files = (
 				5A3B8D1B277B989800F6D545 /* QuranCollectionCell.xib in Resources */,
 				5A9CCD6A276F4459001989D6 /* AthkarOfTheUserCell.xib in Resources */,
-				5A3B8D1F277F7B7C00F6D545 /* Quran.pdf in Resources */,
 				5A3B8D12277B95F300F6D545 /* quran.json in Resources */,
 				5A7DDF1F27652E35005B9059 /* LaunchScreen.storyboard in Resources */,
 				5A7DDF1C27652E35005B9059 /* Assets.xcassets in Resources */,
@@ -282,23 +334,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24632505DE4A3AF2E0F93CD3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		7F9CE3AD7C137627703104EB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +356,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F7E4B0C9B24B39790538465F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FinalProject/Pods-FinalProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -331,6 +383,7 @@
 				5A7DDF1727652E32005B9059 /* ViewController.swift in Sources */,
 				5A7DDF702768C0C5005B9059 /* Sebha.swift in Sources */,
 				5A3B8D1D277C5AB100F6D545 /* Athkar.swift in Sources */,
+				8E770BEB2798996700351200 /* CompassViewController.swift in Sources */,
 				5A7DDF1327652E32005B9059 /* AppDelegate.swift in Sources */,
 				5A7E595327919F6E001A11E1 /* UpdateVC.swift in Sources */,
 				5A9CCD3C276D11B6001989D6 /* NavigationLogin.swift in Sources */,
@@ -338,19 +391,22 @@
 				5A33465E2771FBF7002E29E1 /* AthkarVC.swift in Sources */,
 				5A7DDF2F27660FCB005B9059 /* AthkarTableVC.swift in Sources */,
 				5A3B8D15277B978000F6D545 /* Quran.swift in Sources */,
+				8E770BE82798994A00351200 /* CLLocation+Extension.swift in Sources */,
 				5A3B8D23277F7D4000F6D545 /* QuranPageVC.swift in Sources */,
+				8E770BE72798994A00351200 /* UserDefauts+Extensions.swift in Sources */,
 				5A3B8D1A277B989800F6D545 /* QuranCollectionCell.swift in Sources */,
-				5A874EB2276B32CE0094913E /* AthkaryVC.swift in Sources */,
 				5A7DDF3227661000005B9059 /* AthkarCustomCell.swift in Sources */,
 				5ACB04DA2776076A00333C0F /* AthkarCollectionPage.swift in Sources */,
+				8E770BE62798994A00351200 /* LocationDelegate.swift in Sources */,
 				5A9CCD46276F1BC9001989D6 /* AthkarOfTheUser.swift in Sources */,
 				5A3B8D17277B985700F6D545 /* QuranVC.swift in Sources */,
-				5ACB04DF27778F4800333C0F /* FirstPage.swift in Sources */,
+				5A7E597127959B25001A11E1 /* SebhaCounter.swift in Sources */,
 				5A7DDF6C27672BC6005B9059 /* UserSignUp.swift in Sources */,
 				5A9CCD40276DFFDD001989D6 /* TabBar.swift in Sources */,
 				5A9CCD44276F1A1D001989D6 /* AddAthkar.swift in Sources */,
 				5ACB04DD2776106B00333C0F /* AthkarCollectionVC.swift in Sources */,
 				5A9CCD6C27707B4A001989D6 /* quran.swift in Sources */,
+				8E770BF02798A05B00351200 /* SettingsVC.swift in Sources */,
 				5A7DDF6E27672BEF005B9059 /* UserLogin.swift in Sources */,
 				5A7DDF1527652E32005B9059 /* SceneDelegate.swift in Sources */,
 			);
@@ -502,7 +558,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TS4PZ2XB23;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -515,6 +571,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Mohammad.Alsharif.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -531,7 +588,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = TS4PZ2XB23;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = FinalProject/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -544,6 +601,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Mohammad.Alsharif.FinalProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -574,45 +632,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		5A7E5947278E207E001A11E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		5A7E5948278E207E001A11E1 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A7E5947278E207E001A11E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		5A7E594A278E207E001A11E1 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A7E5947278E207E001A11E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		5A7E594C278E207E001A11E1 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A7E5947278E207E001A11E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		5A7E594E278E207E001A11E1 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A7E5947278E207E001A11E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		5A7E5950278E207E001A11E1 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A7E5947278E207E001A11E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5A7DDF0727652E32005B9059 /* Project object */;
 }
