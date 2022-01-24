@@ -1,9 +1,19 @@
+# CAP-09-Athkar
 # What is the application about ?
 -
 ## The project is divided into tow Parts :
 Part One: The user can't use it without Account
 Part Two: The user can use it without Account
 
+# AS User can :
+
+- The User can create a Athkar .
+- The User can Update the Athkar .
+- The User can delete the Athkar .
+- Reading Athkar .
+- Reading Quran
+- Tasbeh
+- Change to Dark Mode
 
 # The first part contains ?
 
