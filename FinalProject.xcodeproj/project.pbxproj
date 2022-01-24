@@ -44,6 +44,7 @@
 		5AB415DB279EADFA006A81AA /* Sebha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB415C6279EADFA006A81AA /* Sebha.swift */; };
 		5AB415DC279EADFA006A81AA /* SebhaCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB415C7279EADFA006A81AA /* SebhaCounter.swift */; };
 		5AB415DD279EADFA006A81AA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB415C8279EADFA006A81AA /* ViewController.swift */; };
+		5AB415E1279EB60C006A81AA /* Quran.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5AB415E0279EB60C006A81AA /* Quran.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,6 +88,7 @@
 		5AB415C6279EADFA006A81AA /* Sebha.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sebha.swift; sourceTree = "<group>"; };
 		5AB415C7279EADFA006A81AA /* SebhaCounter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SebhaCounter.swift; sourceTree = "<group>"; };
 		5AB415C8279EADFA006A81AA /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5AB415E0279EB60C006A81AA /* Quran.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = Quran.pdf; path = PDF/Quran.pdf; sourceTree = SOURCE_ROOT; };
 		5AE0D8AE2799650600B66385 /* absl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = absl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE0D8B02799650A00B66385 /* openssl_grpc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = openssl_grpc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE0D8B22799650E00B66385 /* FirebaseAuth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseAuth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 				8E770BEC27989FC500351200 /* Controller */,
 				8E770BED27989FF300351200 /* View */,
 				5A7DDF1827652E32005B9059 /* Main.storyboard */,
+				5AB415E0279EB60C006A81AA /* Quran.pdf */,
 				5A7DDF1B27652E35005B9059 /* Assets.xcassets */,
 				5A7DDF1D27652E35005B9059 /* LaunchScreen.storyboard */,
 				5A7DDF5A27670771005B9059 /* GoogleService-Info.plist */,
@@ -316,6 +319,7 @@
 				5A7DDF1F27652E35005B9059 /* LaunchScreen.storyboard in Resources */,
 				5A7DDF1C27652E35005B9059 /* Assets.xcassets in Resources */,
 				5AB4157D279EAD9D006A81AA /* AthkarCustomCell.xib in Resources */,
+				5AB415E1279EB60C006A81AA /* Quran.pdf in Resources */,
 				5AB41580279EAD9D006A81AA /* AthkarOfTheUserCell.xib in Resources */,
 				5A7DDF5B27670771005B9059 /* GoogleService-Info.plist in Resources */,
 				5A7DDF1A27652E32005B9059 /* Main.storyboard in Resources */,
