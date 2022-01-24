@@ -3,12 +3,12 @@
 # AS User I can Create 
 # AS User I can Update 
 # AS User I can delete
-# AS User I can copy the Athkar
 # AS User I can share the Athkar
 # AS User I can use sebha(tsbeeh)
 # AS User I can Activate night mode
 
 # Extra
+# AS User I can copy the Athkar
 # AS User I can Change the language
 # AS user I can read the Qur’an, and listen to some reciters
 # AS user I can determine the qiblah
